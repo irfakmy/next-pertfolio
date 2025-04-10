@@ -12,6 +12,15 @@ export default function Home() {
     console.log("Animation completed!");
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Muhammad_irfa_maulana_cv.pdf"; // pastikan file ada di folder /public
+    link.download = "Muhammad_irfa_maulana_cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="relative overflow-hidden">
       <Navbar />
@@ -83,15 +92,14 @@ export default function Home() {
                     Contact Me
                   </button>
                 </a>
-                
-                <a
-                  href="/Muhammad_irfa_maulana_cv.pdf"
-                  download="Muhammad_irfa_maulana_cv.pdf"
-                  className="flex gap-2 px-6 py-3 bg-[#8F86D9] text-white text-lg font-semibold rounded-lg shadow-md hover:bg-[#7a72c0] transition-all duration-300"
+
+                <button
+                  onClick={handleDownloadCV}
+                  className="flex items-center gap-2 px-6 py-3 bg-[#8F86D9] text-white text-lg font-semibold rounded-lg shadow-md hover:bg-[#7a72c0] transition-all duration-300"
                 >
                   <FiDownload />
                   My CV
-                </a>
+                </button>
               </div>
             </div>
             <div className="md:col-span-6 flex justify-center items-center mt-[-120px]">
