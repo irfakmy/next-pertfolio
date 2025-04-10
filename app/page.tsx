@@ -5,6 +5,7 @@ import RotatingText from "./components/RotatingText/RotatingText";
 import BlurText from "./components/BlurText/BlurText";
 import Particles from "./components/Particles/Particles";
 import Navbar from "./components/Navbar/Navbar";
+import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
   const handleAnimationComplete = () => {
@@ -71,7 +72,7 @@ export default function Home() {
                   rotationInterval={2000}
                 />
               </div>
-              <div className="mt-6 z-50">
+              <div className="mt-6 z-50 flex flex-col md:flex-row items-center gap-2">
                 <a
                   href="mailto:irfakmaulana05@gmail.com"
                   target="_blank"
@@ -81,6 +82,15 @@ export default function Home() {
                   <button className="px-6 py-3 bg-[#8F86D9] text-white text-lg font-semibold rounded-lg shadow-md hover:bg-[#7a72c0] transition-all duration-300">
                     Contact Me
                   </button>
+                </a>
+                
+                <a
+                  href="/Muhammad_irfa_maulana_cv.pdf"
+                  download="Muhammad_irfa_maulana_cv.pdf"
+                  className="flex gap-2 px-6 py-3 bg-[#8F86D9] text-white text-lg font-semibold rounded-lg shadow-md hover:bg-[#7a72c0] transition-all duration-300"
+                >
+                  <FiDownload />
+                  My CV
                 </a>
               </div>
             </div>
